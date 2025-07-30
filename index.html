@@ -9,8 +9,7 @@
 <body>
     <h1> Welcome to the AI Poem Generator</h1>
 <main>
-        <form>
-            <input type="text" placeholder="Enter a topic for your poem" 
+        <form id="poem-generator">            <input type="text" placeholder="Enter a topic for your poem" 
             autofocus
              required
              autocomplete="off"
@@ -20,9 +19,8 @@
        <input type="submit" class="submit-button" />
         </form>
 </br>
-        <div class="poem">
-            Poem will go here
-           <img src="poem.jpg" alt="Poem Image" class="image"/>
+        <div class="poem" id="poem">
+          <img src="poem.jpg" alt="Poem Image" class="image"/>
         </div>
       </br>
     <footer> This AI project was coded by
@@ -34,7 +32,7 @@
       <a href="https://poemgener.netlify.app/" target="_blank">hosted on Netlify</a>
     </div>
     </footer>
-    
+    <script src="src/index.js"></script>
   </body>
 </html>
 
