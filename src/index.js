@@ -1,10 +1,17 @@
 function generatePoem(event) {
 	event.preventDefault();
+
+  new Typewriter("#poem", {
+    strings: "Un souffle doux, une romance",
+    autoStart: true,
+    delay: 3,
+    cursor: "",
+  });
+}
 	alert("Generating your poem...");
 
-let poemElement = document.querySelector("#poem");
-poemElement.innerHTML = "La tombe dit a la rose"; 
-}
-
-let poemFormElement = document.querySelector("poem-generator");
+let poemFormElement = document.querySelector("#poem-generator");
 poemFormElement.addEventListener("submit", generatePoem); 
+
+
+

@@ -24,9 +24,15 @@ form {
   display: flex;
   width: 500px;
 }
+.hint {
+    
+    opacity: 0.6;
+    font-size: 10px;
+}
+
 .instructions {
   padding: 5px;
-  border: 1px solid #a16d67;
+  border: 2px solid #a16d67;
   border-radius: 5px;
   font-size: 16px;
   width: 60%;
@@ -34,9 +40,12 @@ form {
 .instructions:focus {
   outline: none;
   border: 2px solid #805651;
+  font-size: 16px;
+   padding: 8px;
+  margin-bottom: auto;
 }
 .poem {
-  font-size: 30px;
+  font-size: 20px;
   width: 500px;
   background-color: #F7F3FF;
   padding: 20px;
@@ -51,7 +60,7 @@ form {
   background-color: #eeb4ad;
   color: #FFFFFF;
   padding: 10px 20px;
-  border: 1px solid #a16d67;
+  border: 2px solid #a16d67;
   border-radius: 5px;
   cursor: pointer;
   width: 150px;
@@ -67,11 +76,12 @@ form {
 footer {
 	margin-bottom: 100px;
   font-size: 12px;
+  text-align: left;
 }
 
-.web a {
+footer a {
   color: rgb(77, 8, 8);
 }
-.web a:hover {
-    color: rgb(189, 68, 68);
-  }
+footer a:hover {
+  color: rgb(189, 68, 68);
+}
