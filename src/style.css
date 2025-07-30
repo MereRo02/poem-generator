@@ -33,7 +33,7 @@ form {
 }
 .instructions:focus {
   outline: none;
-  border-color: #a16d67;
+  border: 2px solid #805651;
 }
 .poem {
   font-size: 30px;
