@@ -8,7 +8,6 @@ function generatePoem(event) {
     cursor: "",
   });
 }
-	alert("Generating your poem...");
 
 let poemFormElement = document.querySelector("#poem-generator");
 poemFormElement.addEventListener("submit", generatePoem); 
