@@ -3,7 +3,7 @@ function generatePoem(event) {
 	console.log("generating poem");
 
 	document.querySelector("#spinner").classList.remove("hidden");
-
+poemTextElement.innerHTML = "✍️ Generating your poem...";
 	let instructionsInput = document.querySelector("#user-instructions");
 	let topic = instructionsInput.value;
   instructionsInput.value = "";
@@ -24,10 +24,16 @@ console.log("poem generated");
 document.querySelector("#spinner").classList.add("hidden");
 
 let poemTextElement = document.querySelector("#poem-text");
-  poemTextElement.innerHTML = "✍️ Generating your poem...";
+  let copyButton = document.querySelector("#copy-button");
+
+	poemTextElement.innerHTML = "";
+  copyButton.classList.remove("hidden");
+
+	let fullPoem = response.data.answer;
+	let [frenchPoem, englishPoem] = fullPoem.split("SheCodes AI").map((part) => part.trim());
 
  new Typewriter("#poem-text", {
-    strings: [response.data.answer],
+    strings: [`<span class="french-poem">${frenchPoem} SheCodes AI.</span><br><br><span class="english-poem">${englishPoem} SheCodes AI.</span>`],
     autoStart: true,
     delay: 3,
     cursor: "",
@@ -37,5 +43,14 @@ let poemTextElement = document.querySelector("#poem-text");
 let poemFormElement = document.querySelector("#poem-generator");
 poemFormElement.addEventListener("submit", generatePoem); 
 
+ copyButton.onclick = function () {
+    const textToCopy = `${frenchPoem} SheCodes AI.\n\n${englishPoem} SheCodes AI.`;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      copyButton.textContent = "✅ Copied!";
+      setTimeout(() => {
+        copyButton.textContent = "📋 Copy Poem";
+      }, 2000);
+    });
+  };
 
 

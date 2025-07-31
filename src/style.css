@@ -59,6 +59,16 @@ form {
   transition: all 0.3s ease-in;
 }
   
+.french-poem {
+  color: #522e4c; 
+  font-weight: bold;
+}
+
+.english-poem {
+  color: #ad529a;
+  font-style: italic;
+}
+
 .submit-button {
   background-color: #eeb4ad;
   color: #FFFFFF;
@@ -91,6 +101,20 @@ form {
   100% { transform: rotate(360deg); }
 }
 
+.copy-button {
+  margin-top: 15px;
+  background-color: #a16d67;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copy-button:hover {
+  background-color: #8b5a58;
+}
 .hidden {
   display: none;
 }
@@ -108,3 +132,4 @@ footer a {
 footer a:hover {
   color: rgb(189, 68, 68);
 }
+
