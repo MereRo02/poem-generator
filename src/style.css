@@ -101,24 +101,6 @@ form {
   100% { transform: rotate(360deg); }
 }
 
-.copy-button {
-  margin-top: 15px;
-  background-color: #a16d67;
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.copy-button:hover {
-  background-color: #8b5a58;
-}
-.hidden {
-  display: none;
-}
-
 
 footer {
 	margin-bottom: 100px;
