@@ -20,12 +20,9 @@ let instructionsInput = document.querySelector("#user-instructions");
 	console.log(`Prompt: ${prompt}`);
 	console.log(`Context: ${context}`);
 
-	axios.get(apiURL).then(displayPoem);
+	axios.get(apiUrl).then(displayPoem);
 }
-
-let poemFormElement = document.querySelector("#poem-generator-form");
-poemFormElement.addEventListener("submit", generatePoem);
-		
+	
 
 function displayPoem(response) {
 console.log("poem generated");
@@ -41,11 +38,14 @@ let poemTextElement = document.querySelector("#poem-text");
  new Typewriter("#poem-text", {
     strings: [`<span class="french-poem">${frenchPoem} SheCodes AI.</span><br><br><span class="english-poem">${englishPoem} SheCodes AI.</span>`],
     autoStart: true,
-    delay: 3,
+    delay: 1,
     cursor: "",
+		
   });
 }
 
+let poemFormElement = document.querySelector("#poem-generator");
+poemFormElement.addEventListener("submit", generatePoem);
 
 
 
